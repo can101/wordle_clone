@@ -11,8 +11,7 @@ app.use(express.static("./src"));
 app.use(cors());
 
 app.get("/", (req, res) => {
-  // res.render(path.join(__dirname, "./", "src/index.html"));
-  console.log(path.join(__dirname, "./", "src/index.html"));
+  res.render(path.join(__dirname, "./", "src/index.html"));
 });
 
 app.get("/word", (req, res) => {
