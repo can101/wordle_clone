@@ -1,0 +1,237 @@
+@font-face {
+  font-family: nyt-karnakcondensed;
+  src: url(karnakcondensed-normal-700.woff);
+}
+* {
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.game-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  border-bottom: 1px solid #d3d6da;
+}
+.title {
+  font-family: nyt-karnakcondensed;
+  font-weight: 700;
+  font-size: 37px;
+  height: 50px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.01em;
+  text-align: center;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+.message-container {
+  height: 30px !important;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+.message-container p {
+  /* background-color: #818384; */
+  background-color: #d3d6da;
+  padding: 10px;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  margin: 0;
+  position: absolute;
+  z-index: 111;
+}
+.tile-container {
+  width: 330px;
+  margin: 20px 0;
+}
+.tile-container div {
+  display: flex;
+}
+.tile-container .tile {
+  height: 62px !important;
+  width: 62px !important;
+  border: 2px solid #d3d6da;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px;
+  font-weight: bold;
+  font-size: 32px;
+}
+.tile.scale.flip {
+  animation: 0.5s linear eeeeee;
+}
+.tile.scale {
+  border-color: #878a8c;
+  color: #000;
+  animation: 0.1s linear yyyy;
+  transition: 0.1s all cubic-bezier(1, 0, 0, 1);
+}
+@keyframes yyyy {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes eeeeee {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+.key-container {
+  width: 510px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.key-container button {
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 43px;
+  height: 58px;
+  border: none;
+  background-color: #d3d6da;
+  border-radius: 4px;
+  margin: 4px;
+  cursor: pointer;
+}
+.key-container button:nth-child(20),
+.key-container button:nth-child(28) {
+  width: 68px;
+}
+.grey-overlay {
+  background-color: #787c7e !important ;
+  color: #fff !important;
+  border: none !important;
+}
+.yellow-overlay {
+  background-color: #c9b458 !important;
+  color: #fff !important;
+  border: none !important;
+}
+.green-overlay {
+  background-color: #6aaa64 !important;
+  color: #fff !important;
+  border: none !important;
+}
+.retyButton {
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: #d3d6da;
+  color: #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .key-container {
+    width: 450px;
+  }
+  .key-container button {
+    font-size: 12.5px;
+    width: 34px;
+    height: 45px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .key-container {
+    width: 400px;
+  }
+  .key-container button {
+    font-size: 11.5px;
+    width: 30px;
+    height: 45px;
+  }
+  .key-container button:nth-child(20),
+  .key-container button:nth-child(28) {
+    width: 58px;
+  }
+  .tile-container .tile {
+    height: 55px !important;
+    width: 55px !important;
+    font-size: 32px;
+  }
+  .tile-container {
+    width: 270px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .key-container {
+    width: 340px;
+  }
+  .key-container button {
+    font-size: 11.5px;
+    width: 24px;
+    height: 45px;
+  }
+  .key-container button:nth-child(20),
+  .key-container button:nth-child(28) {
+    width: 50px;
+  }
+  .tile-container .tile {
+    height: 50px !important;
+    width: 50px !important;
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .key-container {
+    width: 280px;
+  }
+  .key-container button {
+    font-size: 9px;
+    width: 24px;
+    height: 45px;
+    margin: 2px !important;
+  }
+  .key-container button:nth-child(20),
+  .key-container button:nth-child(28) {
+    width: 38px;
+  }
+}
+@media screen and (max-width: 283px) {
+  .key-container {
+    width: 270px;
+  }
+  .key-container button {
+    font-size: 9px;
+    width: 23px;
+    height: 45px;
+    margin: 2px !important;
+  }
+  .key-container button:nth-child(20),
+  .key-container button:nth-child(28) {
+    width: 36px;
+  }
+  .tile-container {
+    width: 240px;
+  }
+}
